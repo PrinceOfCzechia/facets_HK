@@ -66,6 +66,15 @@ table(data$pocet_urovni)
 # not so much on druh_vykonu
 summary(lm(pocet_opakovani_scanu~pocet_urovni+druh_vykonu, data=data))
 
+par(mfrow=c(1,2))
+hist(data$vyska[data$pohlavi=="M"])
+hist(data$vyska[data$pohlavi=="F"])
+par(mfrow=c(1,1))
+
+par(mfrow=c(1,2))
+hist(data$hmotnost[data$pohlavi=="M"])
+hist(data$hmotnost[data$pohlavi=="F"])
+par(mfrow=c(1,1))
 
 
 
